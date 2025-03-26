@@ -171,6 +171,8 @@ class ModScreen(OptionListScreen):
                 draw("Coop Support: Requires All Players")
             case CoopSupport.ClientSide:
                 draw("Coop Support: Client Side")
+            case CoopSupport.HostOnly:
+                draw("Coop Support: Host Only")
 
         draw("")
 

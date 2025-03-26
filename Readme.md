@@ -20,6 +20,10 @@ a message as the second (both positionally), and show them in a temporary messag
 
 # Changelog
 
+### v1.5
+- Support host-only coop support value
+- Linting fixes
+
 ### v1.4
 - Improved suggestions when trying to bind a key by name, and misspelling it.
 - Swap known controller key names between UE3/UE4 versions, based on game.

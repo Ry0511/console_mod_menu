@@ -2,6 +2,7 @@ import argparse
 
 from mods_base import command
 from mods_base.mod_list import base_mod
+from unrealsdk import logging
 
 from .screens import start_interactive_menu
 
@@ -11,7 +12,7 @@ __all__: tuple[str, ...] = (
     "__version_info__",
 )
 
-__version_info__: tuple[int, int] = (1, 4)
+__version_info__: tuple[int, int] = (1, 5)
 __version__: str = f"{__version_info__[0]}.{__version_info__[1]}"
 __author__: str = "bl-sdk"
 
@@ -24,7 +25,7 @@ def mods_command(_: argparse.Namespace) -> None:
 mods_command.add_argument("-v", "--version", action="version", version=__version__)
 
 mods_command.enable()
-print("Console Mod Menu loaded. Type 'mods' to get started.")
+logging.info("Console Mod Menu loaded. Type 'mods' to get started.")
 
 
 base_mod.components.append(base_mod.ComponentInfo("Console Mod Menu", __version__))

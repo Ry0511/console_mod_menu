@@ -1,6 +1,7 @@
 from textwrap import TextWrapper
 
 from mods_base import html_to_plain_text
+from unrealsdk import logging
 
 wrapper = TextWrapper(width=100, expand_tabs=True, tabsize=2)
 
@@ -18,11 +19,11 @@ def draw(msg: str, indent: int = 0) -> None:
     prefix = "Mod Menu | " + ("  " * indent)
 
     if not msg:
-        print("Mod Menu |")
+        logging.info("Mod Menu |")
         return
 
     for line in wrapper.fill(html_to_plain_text(msg)).splitlines():
-        print(prefix, line)
+        logging.info(prefix, line)
 
 
 def draw_description(description: str, indent: int = 0) -> None:
