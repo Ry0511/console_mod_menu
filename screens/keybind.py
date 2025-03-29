@@ -132,10 +132,7 @@ if raw_keybinds is not None:
             self.name = self.parent.option.display_name
 
         def draw(self) -> None:  # noqa: D102
-            draw(
-                "Close console, then press the key you want to bind to. This screen will"
-                " automatically close after being bound.",
-            )
+            draw("Press the key you want to bind to; Closes automatically after being bound.")
             draw_standard_commands()
 
             # pyright thinks there's a chance this could change by the time we get to the function
